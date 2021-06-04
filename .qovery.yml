@@ -1,0 +1,11 @@
+---
+application:
+  name: "tateti"
+  project: "tateti"
+  organization: "QoveryCommunity"
+routers:
+- name: "main-tateti"
+  routes:
+  - application_name: "tateti"
+    paths:
+    - "/*"
