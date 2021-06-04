@@ -1,5 +1,5 @@
 
-const prefix = 'http://localhost:8080/tateti'
+const prefix = '/tateti'
 
 tateti = function (method, url, data) {
     return new Promise(function (resolve, reject) {
