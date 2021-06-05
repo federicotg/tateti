@@ -93,20 +93,12 @@ function drawBoard(response) {
 
     document.getElementById("turn").innerText = response.turn;
 
-
-    let boardElement = document.getElementById("board");
-
-    while (boardElement.firstChild) {
-        boardElement.removeChild(boardElement.firstChild);
+    if (window.location.href.indexOf('?boardId=') == -1) {
+debugger;
+        let boardElement = document.getElementById("board");
+        console.log(window.location.href);
+        boardElement.value = (window.location.href + '?boardId=' + response.boardId);
     }
-
-    let link = document.createElement('a');
-    let joinUri = prefix + '.html?boardId=' + response.boardId;
-    link.setAttribute('href', joinUri);
-    link.appendChild(document.createTextNode(joinUri));
-
-    boardElement.appendChild(link);
-
     if (response.winner) {
         showError(response.winner == game.id ? 'You win!' : 'You lose!');
     }

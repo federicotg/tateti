@@ -3,7 +3,7 @@
 
 <head>
     <title>Tateti</title>
-    <link rel="shortcut icon" type="image/png" href="index.png"/>
+    <link rel="shortcut icon" type="image/png" href="index.png" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 
@@ -22,13 +22,23 @@
         }
     </style>
 
-    <script type="text/javascript" src="tateti.js" ></script>
-
+    <script type="text/javascript" src="tateti.js"></script>
+    <script type="text/javascript">
+        function cp() {
+            var copyText = document.getElementById("board");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); /* For mobile devices */
+            document.execCommand("copy");
+            document.getElementById("msg").innerText = "Copiado!";
+        }
+    </script>
 </head>
 
 <body onload="joinGame()">
     <h1>Tateti</h1>
-    <p>Jugando en el tablero: <span id="board"></span></p>
+    <p>Jugando en el tablero:</p>
+    <p><input type="text" size="55" readonly id="board" /> <input type="button" value="Copiar" onclick="cp()"> <span
+            id="msg"></span></p>
     <p>Turno: <span id="turn"></span></p>
     <table>
         <tr>
