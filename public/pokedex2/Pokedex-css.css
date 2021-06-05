@@ -1,0 +1,57 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: /*formato de la pagina*/
+    "Pokemones Pokemon Pokemon Pokemon"
+    "Pokemones Pokemon Pokemon Pokemon";
+}
+
+.Pokemon { grid-area: Pokemon; 
+  border: 2px solid #4CAF50;
+  background-color: rgb(173, 238, 148);
+  }
+
+.Pokemones { grid-area: Pokemones; 
+  border: 2px solid #4CAF50;
+  background-color: rgb(173, 238, 148);
+  }
+
+#body{
+  color:rgb(22, 29, 126);
+  cursor: pointer;
+  font-size: large;
+  font-family: sans-serif;
+  font-weight: bold;
+  background-image:url(img/fondopokedexcielo.png); /*imagen de fondo*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+.imagen {
+  align-content: center;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+#boton {
+  cursor: pointer;
+  background-color: #4CAF50;
+  font-family: sans-serif;
+  font-weight: bold;
+  border: 1px;
+  color:rgb(22, 29, 126);
+  border-radius: 10px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration-color: black;
+  font-size: 15px;
+  }
+
+#poke {
+  list-style-image: url(img/pokeball-lista.jpeg);
+}
