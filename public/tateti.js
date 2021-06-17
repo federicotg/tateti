@@ -94,7 +94,6 @@ function drawBoard(response) {
     document.getElementById("turn").innerText = response.turn;
 
     if (window.location.href.indexOf('?boardId=') == -1) {
-debugger;
         let boardElement = document.getElementById("board");
         console.log(window.location.href);
         boardElement.value = (window.location.href + '?boardId=' + response.boardId);
